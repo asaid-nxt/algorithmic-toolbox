@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# sum method
+# sum problem
 def sum(num1, num2)
   num1 + num2
 end

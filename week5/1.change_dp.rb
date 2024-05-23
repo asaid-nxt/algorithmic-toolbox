@@ -15,7 +15,7 @@ def change_dp(money, coins)
   (6..money).each do |m|
     min_change = change(m, coins)
     coins.each do |coin|
-      coins_count = change(m - coin, coins) + 1
+      coins_count = money_hash.keys.include?(m - coin) ? money_hash[m - coin] + 1 : change(m - coin, coins) + 1
       min_change = coins_count if coins_count < min_change
     end
     money_hash[m] = min_change
